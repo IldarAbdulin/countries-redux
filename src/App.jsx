@@ -7,17 +7,21 @@ import { HomePage } from './pages/HomePage';
 import { Details } from './pages/Details';
 import { NotFound } from './pages/NotFound';
 
-export const App = () => {
+function App() {
   return (
     <>
       <Header />
       <Main>
         <Routes>
-          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/" element={
+            <HomePage />
+          } />
           <Route path="/country/:name" element={<Details />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Main>
     </>
   );
-};
+}
+
+export default App;
